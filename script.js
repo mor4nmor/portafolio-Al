@@ -13,6 +13,13 @@ function btnDesencriptar(){
     mensaje.value = txtEncriptado;
     textArea.value="";
 }
+function btnCopiar(){
+    mensaje.select();
+    navigator.clipboard.writeText(mensaje.value);
+    mensaje.value="";
+    alert("El texto se ha copiado a su portapapeles");
+
+}
 
 function encriptar(stringEncriptado){
     let matriz = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
